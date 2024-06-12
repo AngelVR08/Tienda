@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.angel.btsstore.controllers.AgregarColeccionableController">
+   <Pane prefHeight="150.0" prefWidth="1200.0" style="-fx-background-color: #040D26;">
+      <Text fill="WHITE" layoutX="291.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zona Administrativa" textAlignment="CENTER">
+         <font>
+            <Font size="70.0" />
+         </font>
+      </Text>
+   </Pane>
+   <Text layoutX="25.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COLECCIONABLE A AGREGAR">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Text>
+   <Text layoutX="25.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del producto:" wrappingWidth="203.708984375">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Text>
+   <Text layoutX="25.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Text>
+   <Text layoutX="25.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Text>
+   <Button fx:id="agregarBtn" layoutX="52.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#onAgregarBtn" prefHeight="53.0" prefWidth="150.0" style="-fx-background-color: #262F40;" text="Agregar" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Button>
+   <TextField fx:id="nombreTxt" layoutX="25.0" layoutY="246.0" prefHeight="25.0" prefWidth="204.0" />
+   <TextField fx:id="precioTxt" layoutX="25.0" layoutY="311.0" prefHeight="25.0" prefWidth="204.0" />
+   <TextField fx:id="categoriaTxt" layoutX="25.0" layoutY="375.0" prefHeight="25.0" prefWidth="204.0" />
+   <ListView fx:id="inventarioColetxt" layoutX="377.0" layoutY="203.0" prefHeight="586.0" prefWidth="800.0" />
+   <Button fx:id="salirbtm" layoutX="217.0" layoutY="736.0" mnemonicParsing="false" onMouseClicked="#onSalirBtn" prefHeight="53.0" prefWidth="150.0" style="-fx-background-color: #262F40;" text="Salir" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Button>
+   <Text layoutX="698.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INVENTARIO">
+      <font>
+         <Font size="30.0" />
+      </font>
+   </Text>
+   <TextField fx:id="salidaTxt" layoutX="25.0" layoutY="439.0" prefHeight="25.0" prefWidth="204.0" />
+   <Text layoutX="25.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de salida:">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Text>
+   <Text layoutX="25.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad disponible:">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Text>
+   <TextField fx:id="cantidadText" layoutX="25.0" layoutY="499.0" prefHeight="25.0" prefWidth="204.0" />
+</AnchorPane>
