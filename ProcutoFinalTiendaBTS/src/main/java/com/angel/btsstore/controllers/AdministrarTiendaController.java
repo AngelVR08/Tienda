@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 
+import java.sql.*;
+
 public class AdministrarTiendaController {
 
     @FXML
@@ -15,6 +17,32 @@ public class AdministrarTiendaController {
     private Button disco;
     @FXML
     private Button elimProductoBtn;
+    String url = "jdbc:mysql://localhost:3306/tienda?serverTimezone=UTC";
+    String username = "root";
+    String pass = "12345678";
+
+    Connection connection;
+    Statement statement;
+    ResultSet resultSet;
+    //imprimir los datos de sql
+    {
+        try {
+            connection = DriverManager.getConnection(url, username, pass);
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("SELECT * FROM products");
+
+            while (resultSet.next()){
+                System.out.println( resultSet.getString("nombre") + " | " + resultSet.getString("precio") +
+                        resultSet.getString("fechaSalida") + " | " + resultSet.getString("stock") + " | ");
+            }
+
+            connection.close();
+            statement.close();
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @FXML
     void onColeccionablesBtn(MouseEvent event){

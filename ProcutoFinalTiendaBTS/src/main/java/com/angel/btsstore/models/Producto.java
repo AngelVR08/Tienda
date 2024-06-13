@@ -26,6 +26,10 @@ public class Producto {
         return precio;
     }
 
+    public String getFechaSalida() {
+        return fechaSalida;
+    }
+
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }

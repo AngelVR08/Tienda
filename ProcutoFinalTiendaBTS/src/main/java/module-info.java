@@ -2,6 +2,7 @@ module com.angel.btsstore {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
+    requires java.sql;
 
     opens com.angel.btsstore.controllers to javafx.fxml;
     exports com.angel.btsstore.controllers;
